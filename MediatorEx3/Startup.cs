@@ -1,4 +1,4 @@
-using MediatorEx3.Models;
+using MediatorExample.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MediatorEx3
+namespace MediatorExample
 {
     public class Startup
     {

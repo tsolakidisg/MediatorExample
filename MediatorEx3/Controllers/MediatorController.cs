@@ -1,4 +1,4 @@
-﻿using MediatorEx3.Models;
+﻿using MediatorExample.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace MediatorEx3.Controllers
+namespace MediatorExample.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

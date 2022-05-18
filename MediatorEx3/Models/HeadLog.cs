@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace MediatorEx3.Models
+namespace MediatorExample.Models
 {
     public partial class HeadLog
     {

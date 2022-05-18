@@ -1,4 +1,4 @@
-﻿namespace MediatorEx3.Models
+﻿namespace MediatorExample.Models
 {
     public class Orders
     {

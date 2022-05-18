@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace MediatorEx3.Models
+namespace MediatorExample.Models
 {
     public partial class MonitoringContext : DbContext
     {

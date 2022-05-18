@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "MediatorEx3": {
+    "MediatorExample": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "mediator",
