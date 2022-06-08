@@ -29,9 +29,9 @@ namespace MediatorExample.Controllers
         [HttpPost]
         public async Task<ActionResult> PostOrder([FromBody] Orders orderObj)
         {
-            // Stack trace
-            System.Diagnostics.StackTrace t = new System.Diagnostics.StackTrace();
-            string stackTrace = t.ToString();
+            //// Stack trace
+            //System.Diagnostics.StackTrace t = new System.Diagnostics.StackTrace();
+            //string stackTrace = t.ToString();
 
 
             var head = _context.HeadLogs.Count(a => a.Guid == orderObj.Header.Id);
@@ -49,10 +49,12 @@ namespace MediatorExample.Controllers
                 };
                 //_context.HeadLogs.Add(headLog);
                 //await _context.SaveChangesAsync();
-                if (!InsertHead(headLog))
-                {
-                    return StatusCode(StatusCodes.Status503ServiceUnavailable);
-                }
+                //if (!InsertHead(headLog))
+                //{
+                //    return StatusCode(StatusCodes.Status503ServiceUnavailable);
+                //}
+
+                Logger.InsertHead(headLog);
 
                 // Mediator logic, based on order's type
                 if (orderObj.Header.OrderType == "New")
@@ -86,13 +88,12 @@ namespace MediatorExample.Controllers
                         };
                         //_context.DetailLogs.Add(detailLog);
                         //await _context.SaveChangesAsync();
-                        if (!InsertDetail(detailLog))
-                        {
-                            return StatusCode(StatusCodes.Status503ServiceUnavailable);
-                        }
+                        //if (!InsertDetail(detailLog))
+                        //{
+                        //    return StatusCode(StatusCodes.Status503ServiceUnavailable);
+                        //}
 
-                        
-
+                        Logger.InsertDetail(detailLog);
 
                         // Invoke the publisher method to write the message on the queue
                         if (!QueuePublish(JsonSerializer.Serialize(orderObj)))

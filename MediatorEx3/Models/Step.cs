@@ -10,5 +10,6 @@ namespace MediatorExample.Models
         public string OrderType { get; set; }
         public int StepId { get; set; }
         public string StepDescription { get; set; }
+        public object Payload { get; set; }
     }
 }
